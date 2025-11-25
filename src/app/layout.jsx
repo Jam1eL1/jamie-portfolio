@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -11,13 +11,20 @@ export const metadata = {
   description: "Full stack developer portfolio",
 };
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-midnight text-primary font-inter">
         <div className="min-h-screen flex flex-col">
           <main className="flex-1">
-            <div className="mx-auto max-w-mobile md:max-w-tablet xl:max-w-desktop py-16 md:py-20 xl:py-30 flex flex-col">
+            <div
+              className="
+  mx-auto 
+  max-w-mobile md:max-w-tablet xl:max-w-desktop
+  py-16 md:py-20 xl:py-30
+  flex flex-col
+"
+            >
               {children}
             </div>
           </main>
@@ -28,3 +35,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout;

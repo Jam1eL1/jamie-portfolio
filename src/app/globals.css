@@ -1,13 +1,43 @@
 @import "tailwindcss";
 
+@theme {
+  /* Custom colors */
+  --color-midnight: #0a0e1a;
+  --color-surface: #1e293b;
+  --color-cyan: #06b6d4;
+  --color-purple: #5e00ff;
+  --color-primary: #f1f5f9;
+  --color-secondary: #94a3b8;
+
+  /* Custom spacing */
+  --spacing-6: 24px;
+  --spacing-10: 40px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-30: 120px;
+
+  /* Custom max-widths */
+  --width-mobile: 343px;
+  --width-tablet: 680px;
+  --width-desktop: 1200px;
+
+  /* Font family */
+  --font-family-inter: var(--font-inter);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0A0E1A; 
-  color: #F1F5F9; 
-  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  background-color: #0a0e1a;
+  color: #f1f5f9;
+  font-family:
+    var(--font-inter),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 body {
@@ -26,5 +56,15 @@ button {
   border: none;
   padding: 0;
 }
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-
+.animate-spin-slow {
+  animation: spin-slow 14s linear infinite;
+}
