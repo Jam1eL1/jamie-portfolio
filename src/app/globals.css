@@ -25,6 +25,18 @@
   --font-family-inter: var(--font-inter);
 }
 
+@layer utilities {
+  .min-w-mobile {
+    min-width: var(--width-mobile);
+  }
+  .max-w-tablet {
+    max-width: var(--width-tablet);
+  }
+  .max-w-desktop {
+    max-width: var(--width-desktop);
+  }
+}
+
 html,
 body {
   margin: 0;

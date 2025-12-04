@@ -20,7 +20,7 @@ function RootLayout({ children }) {
             <div
               className="
   mx-auto 
-  max-w-mobile md:max-w-tablet xl:max-w-desktop
+  max-w-desktop
   py-16 md:py-20 xl:py-30
   flex flex-col
 "
@@ -29,7 +29,7 @@ function RootLayout({ children }) {
             </div>
           </main>
 
-          <footer>/* Footer */</footer>
+          <footer></footer>
         </div>
       </body>
     </html>
