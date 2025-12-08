@@ -38,7 +38,7 @@ function HomePage() {
             {/* TODO: Update linkedin address */}
             <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
               <Image
-                src="/icons/linkedin_icon.svg"
+                src="/icons/linkedin.svg"
                 alt="LinkedIn"
                 width={24}
                 height={24}
@@ -47,7 +47,7 @@ function HomePage() {
             </a>
             <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
               <Image
-                src="/icons/github_icon.svg"
+                src="/icons/github.svg"
                 alt="GitHub"
                 width={24}
                 height={24}
@@ -56,7 +56,7 @@ function HomePage() {
             </a>
             {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
             <Image
-              src="/icons/gmail_icon.svg"
+              src="/icons/gmail.svg"
               alt="GitHub"
               width={24}
               height={18}
@@ -90,7 +90,7 @@ function HomePage() {
       </Section>
 
       {/* Skills section - Tools I Use */}
-      <Section id="skills" className="items-center justify-center"/>
+      <Section id="skills" className="items-center justify-center" />
       {/* Projects section - My Work */}
       <Section id="projects" />
       {/* Blog section - Dev Journal */}
