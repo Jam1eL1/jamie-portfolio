@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import ToolsGrid from "@/components/ToolsGrid";
 import Image from "next/image";
 
 function HomePage() {
@@ -90,7 +91,12 @@ function HomePage() {
       </Section>
 
       {/* Skills section - Tools I Use */}
-      <Section id="skills" className="items-center justify-center" />
+      <Section id="skills" className="items-center justify-center">
+        <h1 className="text-primary font-semibold text-[32px]/10 md:text-5xl/[56px] md:tracking-[-0.01em] xl:text-[64px]/[72px] xl:tracking-[-0.02em]">
+          Tools I Use
+        </h1>
+        <ToolsGrid />
+      </Section>
       {/* Projects section - My Work */}
       <Section id="projects" />
       {/* Blog section - Dev Journal */}
