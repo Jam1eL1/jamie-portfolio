@@ -23,7 +23,15 @@ function ToolsGrid() {
     >
       {skills.map((skill) => (
         <div key={skill.name} className="flex items-center justify-center">
-          <Image src={skill.src} alt={skill.name} width={57} height={56} className="h-[56px] w-[57px]" />
+          <div className="bg-surface rounded-lg p-4 transition-all duration-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:scale-105">
+            <Image
+              src={skill.src}
+              alt={skill.name}
+              width={57}
+              height={56}
+              className={skill.name === "nextjs" ? "h-[64px] w-[65px]" : "h-[56px] w-[57px]"}
+            />
+          </div>
         </div>
       ))}
     </div>
