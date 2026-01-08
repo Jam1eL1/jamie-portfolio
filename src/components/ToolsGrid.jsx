@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function ToolsGrid() {
+export function ToolsGrid() {
   const skills = [
     { name: "aws", src: "/icons/aws.svg" },
     { name: "express", src: "/icons/express.svg" },
@@ -57,4 +57,3 @@ function ToolsGrid() {
     </div>
   );
 }
-export default ToolsGrid;

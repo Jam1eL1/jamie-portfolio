@@ -1,8 +1,8 @@
-import Section from "@/components/Section";
-import ToolsGrid from "@/components/ToolsGrid";
+import { Section } from "@/components/Section";
+import { ToolsGrid } from "@/components/ToolsGrid";
 import Image from "next/image";
 
-function HomePage() {
+export default function HomePage() {
   return (
     // Sections Container
     <div className="flex flex-col gap-16 md:gap-20 xl:gap-30">
@@ -65,7 +65,7 @@ function HomePage() {
             />
 
             <a href="">
-              <p className="text-base/[26px] font-normal text-cyan">View Full Résumé</p>
+              <p className="text-base/[26px] font-normal text-accent">View Full Résumé</p>
             </a>
           </div>
         </div>
@@ -105,4 +105,3 @@ function HomePage() {
   );
 }
 
-export default HomePage;
