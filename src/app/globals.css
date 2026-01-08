@@ -4,8 +4,8 @@
   /* Custom colors */
   --color-midnight: #0a0e1a;
   --color-surface: #1e293b;
-  --color-cyan: #06b6d4;
-  --color-purple: #5e00ff;
+  --color-accent: #06b6d4;
+  --color-highlight: #5e00ff;
   --color-primary: #f1f5f9;
   --color-secondary: #94a3b8;
 
@@ -58,7 +58,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
