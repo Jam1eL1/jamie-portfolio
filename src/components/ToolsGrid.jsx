@@ -1,16 +1,24 @@
-import Image from "next/image";
+import AwsIcon from "@/assets/icons/aws.svg";
+import ExpressIcon from "@/assets/icons/express.svg";
+import ReactIcon from "@/assets/icons/reactjs.svg";
+import TypeScriptIcon from "@/assets/icons/typescript.svg";
+import JavaScriptIcon from "@/assets/icons/javascript.svg";
+import NextIcon from "@/assets/icons/nextjs.svg";
+import NodeIcon from "@/assets/icons/nodejs.svg";
+import TailwindIcon from "@/assets/icons/tailwindcss.svg";
+import PostgresIcon from "@/assets/icons/postgresql.svg";
 
 export function ToolsGrid() {
   const skills = [
-    { name: "aws", src: "/icons/aws.svg" },
-    { name: "express", src: "/icons/express.svg" },
-    { name: "react", src: "/icons/reactjs.svg" },
-    { name: "typescript", src: "/icons/typescript.svg" },
-    { name: "javascript", src: "/icons/javascript.svg" },
-    { name: "nextjs", src: "/icons/nextjs.svg" },
-    { name: "nodejs", src: "/icons/nodejs.svg" },
-    { name: "tailwindcss", src: "/icons/tailwindcss.svg" },
-    { name: "postgresql", src: "/icons/postgresql.svg" },
+    { name: "aws", Icon: AwsIcon },
+    { name: "express", Icon: ExpressIcon },
+    { name: "react", Icon: ReactIcon },
+    { name: "typescript", Icon: TypeScriptIcon },
+    { name: "javascript", Icon: JavaScriptIcon },
+    { name: "nextjs", Icon: NextIcon },
+    { name: "nodejs", Icon: NodeIcon },
+    { name: "tailwindcss", Icon: TailwindIcon },
+    { name: "postgresql", Icon: PostgresIcon },
   ];
 
   const formatName = (name) => {
@@ -38,8 +46,8 @@ export function ToolsGrid() {
         xl:grid-cols-6
       "
     >
-      {skills.map((skill) => (
-        <div key={skill.name} className="flex items-center justify-center">
+      {skills.map(({ name, Icon }) => (
+        <div key={name} className="flex items-center justify-center">
           <div
             className="
               relative
@@ -54,16 +62,13 @@ export function ToolsGrid() {
               group
             "
           >
-            <Image
-              src={skill.src}
-              alt={skill.name}
-              width={57}
-              height={56}
-              className="
-                h-[56px] w-[57px]
+            <Icon
+              aria-label={name}
+              className="h-[56px] w-[57px]
+                text-muted-foreground
                 transition-transform duration-300
                 group-hover:-translate-y-2
-              "
+                group-hover:text-foreground"
             />
 
             <span
@@ -77,7 +82,7 @@ export function ToolsGrid() {
                 whitespace-nowrap
               "
             >
-              {formatName(skill.name)}
+              {formatName(name)}
             </span>
           </div>
         </div>

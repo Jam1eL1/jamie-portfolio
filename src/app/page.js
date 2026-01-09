@@ -1,6 +1,9 @@
 import { Section } from "@/components/Section";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import Image from "next/image";
+import GithubIcon from "@/assets/icons/github.svg";
+import GmailIcon from "@/assets/icons/gmail.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
 
 export default function HomePage() {
   return (
@@ -41,33 +44,36 @@ export default function HomePage() {
           <div className="flex w-full justify-center items-center gap-3">
             {/* TODO: Update linkedin address */}
             <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
-              <Image
+              {/* <Image
                 src="/icons/linkedin.svg"
                 alt="LinkedIn"
                 width={24}
                 height={24}
                 className="hover:opacity-70 transition-opacity"
-              />
+              /> */}
+              <LinkedInIcon className="h-6 w-6 hover:opacity-70 transition-opacity" />
             </a>
 
             <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
-              <Image
+              {/* <Image
                 src="/icons/github.svg"
                 alt="GitHub"
                 width={24}
                 height={24}
                 className="hover:opacity-70 transition-opacity"
-              />
+              /> */}
+              <GithubIcon className="h-6 w-6 hover:opacity-70 transition-opacity" />
             </a>
 
             {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
-            <Image
+            {/* <Image
               src="/icons/gmail.svg"
               alt="Gmail"
               width={24}
               height={18}
               className="hover:opacity-70 transition-opacity"
-            />
+            /> */}
+            <GmailIcon className="h-4.5 w-6 hover:opacity-70 transition-opacity" />
 
             <a href="">
               <p className="text-base/[26px] font-normal text-brand">View Full Résumé</p>
