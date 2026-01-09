@@ -4,6 +4,7 @@ import Image from "next/image";
 import GithubIcon from "@/assets/icons/github.svg";
 import GmailIcon from "@/assets/icons/gmail.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function HomePage() {
   return (
@@ -44,17 +45,15 @@ export default function HomePage() {
           <div className="flex w-full justify-center items-center gap-3">
             {/* TODO: Update linkedin address */}
             <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
-             
               <LinkedInIcon className="h-6 w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
             </a>
 
             <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
-             
-              <GithubIcon className="h-6 w-6 align-middle text-muted-foreground transition-opacity" />
+              <GithubIcon className="h-6 w-6 align-middle text-muted-foreground hover:opacity-70 transition-opacity" />
             </a>
 
             {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
-           
+
             <GmailIcon className="h-[18px] w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
 
             <a href="">
@@ -92,9 +91,11 @@ export default function HomePage() {
         <ToolsGrid />
       </Section>
 
+      {/* Temporary light/dark toggle button */}
+
       {/* Projects section - My Work */}
       <Section id="projects" />
-
+      <ThemeToggle />
       {/* Blog section - Dev Journal */}
       <Section id="journals" />
     </div>
