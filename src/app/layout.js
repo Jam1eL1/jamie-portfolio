@@ -14,8 +14,8 @@ export const metadata = {
 
 function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-midnight text-primary font-inter">
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="bg-background text-foreground font-inter">
         <Providers>
           <div className="min-h-screen flex flex-col">
             <main className="flex-1">
