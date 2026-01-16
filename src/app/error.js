@@ -13,16 +13,10 @@ export default function ErrorPage({ error, reset }) {
           {error?.message || "An unexpected error occurred. Please try again."}
         </p>
         <div className="flex gap-4 mt-4">
-          <button
-            onClick={reset}
-            className="px-6 py-3 bg-surface rounded-lg text-primary text-base font-normal hover:bg-surface-hover transition-colors duration-300"
-          >
+          <button onClick={reset} className="btn btn-surface">
             Try again
           </button>
-          <a
-            href="/"
-            className="px-6 py-3 bg-surface rounded-lg text-brand text-base font-normal hover:bg-surface-hover transition-colors duration-300"
-          >
+          <a href="/" className="btn btn-brand">
             Go home
           </a>
         </div>
