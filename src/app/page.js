@@ -79,20 +79,20 @@ export default function HomePage() {
 
         {/* About/Right - Bio*/}
         <div className="flex flex-col gap-4 w-full">
-          <p className="text-base/[26px] font-normal text-muted-foreground">
+          <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
             I'm a recent web development bootcamp graduate specializing in full-stack development with Next.js and
             Express.
           </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
+          <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
             Before transitioning into tech, I worked as an associate on a wealth management team at RBC Dominion
             Securities. My experience in banking strengthened my attention to detail and analytical mindset — qualities
             I now bring to writing clean, efficient code.
           </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
+          <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
             Curiosity about technology and a love for problem-solving inspired me to pursue a career where I can keep
             learning, building, and growing.
           </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
+          <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
             When I'm not coding, you'll often find me swimming at the Y or running along the beaches of Kitsilano.
           </p>
         </div>
@@ -108,11 +108,22 @@ export default function HomePage() {
 
       {/* Projects section - My Work */}
       <Section id="projects">
-        {/* Featured Projects */}
-        {/* My Work */}
-        {/* take a look at.... */}
-        {/* Project Card Wrapper */}
-        <div className="flex flex-col gap-8 md:gap-12 xl:gap-16 xl:flex-row">
+        <div className="flex flex-col items-center justify-center gap-3 md:gap-6 xl:gap-12">
+          {/* Featured Projects */}
+          <span className="text-brand text-xs/4 font-semibold tracking-[0.05em] uppercase">featured projects</span>
+          {/* My Work */}
+          <h1 className="text-foreground font-semibold text-[32px]/10 md:text-5xl/[56px] md:tracking-[-0.01em] xl:text-[64px]/[72px] xl:tracking-[-0.02em]">
+            My Work
+          </h1>
+          {/* take a look at.... */}
+          <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
+            Take a look at what I built during my web development bootcamp and my current solo work, featuring React,
+            Next.js, Express, and AWS.
+          </p>
+          {/* Project Card Wrapper */}
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-8 md:gap-12 xl:gap-16 xl:flex-row">
           {projects.map((p) => (
             <ProjectCard
               key={p.title}
