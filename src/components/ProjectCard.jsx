@@ -15,7 +15,7 @@ export function ProjectCard({ title, description, previewSrc, technologies }) {
   "
     >
       {/* Preview Image */}
-      <div className="relative w-full h-[200px] bg-gradient-preview">
+      <div className="relative w-full h-[160px] md:h-[200px] bg-gradient-preview">
         {" "}
         {previewSrc ? (
           <Image
@@ -23,6 +23,7 @@ export function ProjectCard({ title, description, previewSrc, technologies }) {
             alt={`${title} preview`}
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 450px"
           />
         ) : null}
       </div>

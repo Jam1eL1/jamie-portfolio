@@ -5,19 +5,20 @@ import GmailIcon from "@/assets/icons/gmail.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ProjectCard } from "@/components/ProjectCard";
-
+import projectSnackPreview from "@/assets/images/project_snack_preview.webp"
 export default function HomePage() {
   const projects = [
     {
       title: "Snack",
       description: "An all-in-one office procurement service",
-      previewSrc: "/images/projects/snack.png", 
+      previewSrc: projectSnackPreview,
       technologies: ["react", "typescript", "node.js", "tailwind"],
     },
+    // TODO: Update when you start the next project
     {
       title: "Another Project",
       description: "Short one-liner explaining the value",
-      previewSrc: "/images/projects/another.png",
+      previewSrc: projectSnackPreview,
       technologies: ["next.js", "express", "postgres", "aws"],
     },
   ];
@@ -26,7 +27,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 md:gap-20 xl:gap-30">
       {/* About section - Jamie Lee with Intro */}
       <Section id="about" className="items-start justify-center md:flex-row md:pt-5 ">
-        {/* About/Left */}
+        {/* TODO: Re-design this part About/Left */}
         <div className="flex flex-col gap-3 md:gap-4 items-center justify-center w-full">
           {/* <div className="relative w-[250px] h-[250px]">
             <div className="absolute inset-[-10px] rounded-full bg-brand/10 blur-lg" />
