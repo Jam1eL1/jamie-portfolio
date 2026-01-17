@@ -31,13 +31,44 @@ export default function HomePage() {
         <div className="flex flex-col gap-3 md:gap-4 items-center justify-center w-full">
           {/* Avatar */}
           <div className="relative w-[250px] h-[250px]">
-            {/* Spinning gradient ring */}
-            <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg_at_50%_50%,#2E1065,#A78BFA,#2E1065)] animate-spin-slow p-1">
-              <div className="w-full h-full rounded-full bg-background" />
+            <div className="absolute inset-[-10px] rounded-full bg-brand/10 blur-lg" />
+            {/* avatar */}
+            <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
+              {/* Image */}
+              <div className="absolute inset-2 rounded-full overflow-hidden bg-background z-10">
+                <Image
+                  src="/images/avatar_placeholder.png"
+                  alt="Jamie Lee avatar"
+                  width={250}
+                  height={250}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
             </div>
+            {/* <div className="group relative w-[250px] h-[250px]">
+              <div
+                className="
+      absolute inset-0
+      rounded-full
+      bg-gradient-to-br from-brand via-accent/60 to-brand
+      blur-xl
+      opacity-25
+    "
+              />
+              <div
+                className="absolute inset-0 rounded-full p-[4px]
+    bg-gradient-to-br from-brand to-accent
+    transition-transform duration-500
+    group-hover:rotate-180
+  "
+              >
+                <div className="w-full h-full rounded-full bg-background" />
+              </div>
+            </div> */}
 
             {/* TODO: Replace it with real photo later */}
-            <div className="absolute inset-2 rounded-full overflow-hidden bg-background z-10">
+            {/* <div className="absolute inset-2 rounded-full overflow-hidden bg-background z-10">
               <Image
                 src="/images/avatar_placeholder.png"
                 alt="Jamie Lee avatar"
@@ -46,7 +77,7 @@ export default function HomePage() {
                 className="h-full w-full object-cover"
                 priority
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Name and Title */}
@@ -108,19 +139,15 @@ export default function HomePage() {
 
       {/* Projects section - My Work */}
       <Section id="projects">
-        <div className="flex flex-col items-center justify-center gap-3 md:gap-6 xl:gap-12">
-          {/* Featured Projects */}
+        <div className="flex flex-col items-center justify-center gap-3 md:gap-4 xl:gap-5">
           <span className="text-brand text-xs/4 font-semibold tracking-[0.05em] uppercase">featured projects</span>
-          {/* My Work */}
           <h1 className="text-foreground font-semibold text-[32px]/10 md:text-5xl/[56px] md:tracking-[-0.01em] xl:text-[64px]/[72px] xl:tracking-[-0.02em]">
             My Work
           </h1>
-          {/* take a look at.... */}
           <p className="text-base/[26px] font-normal md:text-xl/8 text-muted-foreground">
             Take a look at what I built during my web development bootcamp and my current solo work, featuring React,
             Next.js, Express, and AWS.
           </p>
-          {/* Project Card Wrapper */}
         </div>
 
         <div className="flex flex-col items-center justify-center gap-8 md:gap-12 xl:gap-16 xl:flex-row">
