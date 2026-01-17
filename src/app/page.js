@@ -1,6 +1,5 @@
 import { Section } from "@/components/Section";
 import { ToolsGrid } from "@/components/ToolsGrid";
-import Image from "next/image";
 import GithubIcon from "@/assets/icons/github.svg";
 import GmailIcon from "@/assets/icons/gmail.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
@@ -29,56 +28,14 @@ export default function HomePage() {
       <Section id="about" className="items-start justify-center md:flex-row md:pt-5 ">
         {/* About/Left */}
         <div className="flex flex-col gap-3 md:gap-4 items-center justify-center w-full">
-          {/* Avatar */}
-          <div className="relative w-[250px] h-[250px]">
+          {/* <div className="relative w-[250px] h-[250px]">
             <div className="absolute inset-[-10px] rounded-full bg-brand/10 blur-lg" />
-            {/* avatar */}
             <div className="relative z-10 w-full h-full rounded-full overflow-hidden">
-              {/* Image */}
               <div className="absolute inset-2 rounded-full overflow-hidden bg-background z-10">
-                <Image
-                  src="/images/avatar_placeholder.png"
-                  alt="Jamie Lee avatar"
-                  width={250}
-                  height={250}
-                  className="h-full w-full object-cover"
-                  priority
-                />
+                <Image src={ProfilePhoto} alt="Jamie Lee profile photo" fill className="object-cover" priority />
               </div>
             </div>
-            {/* <div className="group relative w-[250px] h-[250px]">
-              <div
-                className="
-      absolute inset-0
-      rounded-full
-      bg-gradient-to-br from-brand via-accent/60 to-brand
-      blur-xl
-      opacity-25
-    "
-              />
-              <div
-                className="absolute inset-0 rounded-full p-[4px]
-    bg-gradient-to-br from-brand to-accent
-    transition-transform duration-500
-    group-hover:rotate-180
-  "
-              >
-                <div className="w-full h-full rounded-full bg-background" />
-              </div>
-            </div> */}
-
-            {/* TODO: Replace it with real photo later */}
-            {/* <div className="absolute inset-2 rounded-full overflow-hidden bg-background z-10">
-              <Image
-                src="/images/avatar_placeholder.png"
-                alt="Jamie Lee avatar"
-                width={250}
-                height={250}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div> */}
-          </div>
+          </div> */}
 
           {/* Name and Title */}
           <h1 className="text-foreground font-semibold text-[32px]/10 md:text-5xl/[56px] md:tracking-[-0.01em] xl:text-[64px]/[72px] xl:tracking-[-0.02em]">
