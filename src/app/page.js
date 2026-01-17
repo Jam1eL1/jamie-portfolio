@@ -5,8 +5,23 @@ import GithubIcon from "@/assets/icons/github.svg";
 import GmailIcon from "@/assets/icons/gmail.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ProjectCard } from "@/components/ProjectCard";
 
 export default function HomePage() {
+  const projects = [
+    {
+      title: "Snack",
+      description: "An all-in-one office procurement service",
+      previewSrc: "/images/projects/snack.png", 
+      technologies: ["react", "typescript", "node.js", "tailwind"],
+    },
+    {
+      title: "Another Project",
+      description: "Short one-liner explaining the value",
+      previewSrc: "/images/projects/another.png",
+      technologies: ["next.js", "express", "postgres", "aws"],
+    },
+  ];
   return (
     // Sections Container
     <div className="flex flex-col gap-16 md:gap-20 xl:gap-30">
@@ -91,13 +106,29 @@ export default function HomePage() {
         <ToolsGrid />
       </Section>
 
-      {/* Temporary light/dark toggle button */}
-
       {/* Projects section - My Work */}
-      <Section id="projects" />
-      <ThemeToggle />
+      <Section id="projects">
+        {/* Featured Projects */}
+        {/* My Work */}
+        {/* take a look at.... */}
+        {/* Project Card Wrapper */}
+        <div className="flex flex-col gap-8 md:gap-12 xl:gap-16 xl:flex-row">
+          {projects.map((p) => (
+            <ProjectCard
+              key={p.title}
+              title={p.title}
+              description={p.description}
+              previewSrc={p.previewSrc}
+              technologies={p.technologies}
+            />
+          ))}
+        </div>
+      </Section>
+
       {/* Blog section - Dev Journal */}
       <Section id="journals" />
+      {/* Temporary light/dark toggle button */}
+      <ThemeToggle />
     </div>
   );
 }

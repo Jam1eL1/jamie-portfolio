@@ -12,6 +12,7 @@
 
   --color-brand: #06b6d4;
   --color-accent: #5e00ff;
+  --color-success: #22c55e;
 
   --spacing-6: 24px;
   --spacing-10: 40px;
@@ -91,6 +92,10 @@ html.dark {
 
   .btn-brand {
     @apply bg-surface text-brand hover:bg-surface-hover;
+  }
+
+  .gradient-preview {
+    background: linear-gradient(to right, var(--color-accent), #a78bfa);
   }
 }
 
