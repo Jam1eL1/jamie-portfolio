@@ -4,7 +4,7 @@ import { Badge } from "./Badge";
 export function ProjectCard({ title, description, previewSrc, technologies }) {
   return (
     <article
-      className="w-full md:max-w-[400px] md:h-[440px]
+      className="w-full flex flex-col
     group
     rounded-xl
     border-2 border-brand/20
