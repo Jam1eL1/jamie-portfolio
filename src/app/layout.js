@@ -17,7 +17,7 @@ function RootLayout({ children }) {
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="bg-background text-foreground font-inter">
         <Providers>
-          <div className="min-h-screen flex flex-col">
+          {/* <div className="min-h-screen flex flex-col">
             <main className="flex-1">
               <div
                 className="
@@ -31,7 +31,8 @@ function RootLayout({ children }) {
               </div>
             </main>
             <footer></footer>
-          </div>
+          </div> */}
+          <div className="flex-1"><div className="flex flex-col max-w-desktop mx-auto md:min-w-tablet">{children}</div></div>
         </Providers>
       </body>
     </html>

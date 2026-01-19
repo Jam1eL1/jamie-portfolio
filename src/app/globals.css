@@ -103,6 +103,7 @@ html.dark {
   .min-w-mobile {
     min-width: var(--width-mobile);
   }
+
   .max-w-tablet {
     max-width: var(--width-tablet);
   }

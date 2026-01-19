@@ -47,7 +47,7 @@ export function ToolsGrid() {
       "
     >
       {skills.map(({ name, Icon }) => (
-        <div key={name} className="flex items-center justify-center">
+        <div key={name} className="flex items-center justify-start">
           <div
             className="
               relative
