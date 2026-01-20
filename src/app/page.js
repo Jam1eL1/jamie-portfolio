@@ -23,10 +23,15 @@ export default function HomePage() {
   ];
   return (
     //  Content Container
-    <div className="flex flex-col gap-6  px-3 py-12 md:px-0 md:flex-row md:gap-4">
+    <div className="w-full flex flex-col gap-6 px-3 py-12 md:px-0 md:flex-row md:gap-4">
       {/* Left Profile Rail */}
-      {/* TODO: md:sticky not applied */}
-      <header className="flex flex-col gap-3 justify-start items-start md:w-[220px]">
+      <header
+        className="
+    w-full flex flex-col gap-3 justify-start items-start
+    md:w-[260px] md:shrink-0
+    md:sticky md:top-0 md:self-start
+  "
+      >
         <h1 className="text-foreground text-2xl/8 font-semibold tracking-[-0.01em] md:text-[36px]/[44px] md:font-bold md:tracking-[-0.02em]">
           JAMIE LEE
         </h1>
@@ -36,22 +41,19 @@ export default function HomePage() {
           <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
             <LinkedInIcon className="h-6 w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
           </a>
-
           <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
             <GithubIcon className="h-6 w-6 align-middle text-muted-foreground hover:opacity-70 transition-opacity" />
           </a>
-
           {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
-
           <GmailIcon className="h-[18px] w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
-
           <a href="">
             <p className="text-base/[26px] font-normal text-brand">View Résumé</p>
           </a>
         </div>
       </header>
       {/* Main Content */}
-      <main className="flex flex-col w-full gap-8 md:gap-16">
+      {/* <main className="w-full flex flex-col gap-8 md:gap-16"> */}
+      <main className="w-full flex-1 flex flex-col gap-8 md:gap-16">
         {/* About */}
         <section className="flex flex-col gap-4 md:gap-5 w-full">
           <p className="text-base/[26px] font-normal text-muted-foreground">
