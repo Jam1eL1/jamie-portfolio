@@ -110,27 +110,39 @@ export default function HomePage() {
 
         {/* Journals */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
-          <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase">Journals</h2>
+          <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
+            <h2 id="journals-heading" className="text-[18px]/[26px] font-semibold uppercase">
+              Journals
+            </h2>
           </div>
-          <div className="flex flex-col gap-3">
-            <p className="text-base/[26px] font-normal text-foreground">Lesson from Building My First Full-Stack App</p>
-            <span className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">Oct 2025</span>
+
+          <article className="flex flex-col gap-3">
+            <h3 className="text-base/[26px] font-normal text-foreground">
+              Lesson from Building My First Full-Stack App
+            </h3>
+
+            <time dateTime="2025-10" className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">
+              Oct 2025
+            </time>
+
             <p className="text-sm/[22px] font-normal text-muted-foreground">
-              A short reflection on challenges I faced connecting connecting frontend and backend APIs using Express and
-              Next.js… A reflection on connecting front and back ends with Express, handling async data, and debugging
-              deployment on AWS.
+              A short reflection on challenges I faced connecting frontend and backend APIs using Express and Next.js…
             </p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <p className="text-base/[26px] font-normal text-foreground">Lesson from Building My First Full-Stack App</p>
-            <span className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">Oct 2025</span>
+          </article>
+
+          <article className="flex flex-col gap-3">
+            <h3 className="text-base/[26px] font-normal text-foreground">
+              Lesson from Building My First Full-Stack App
+            </h3>
+
+            <time dateTime="2025-10" className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">
+              Oct 2025
+            </time>
+
             <p className="text-sm/[22px] font-normal text-muted-foreground">
-              A short reflection on challenges I faced connecting connecting frontend and backend APIs using Express and
-              Next.js… A reflection on connecting front and back ends with Express, handling async data, and debugging
-              deployment on AWS.
+              A short reflection on challenges I faced connecting frontend and backend APIs using Express and Next.js…
             </p>
-          </div>
+          </article>
         </section>
 
         {/* Temporary light/dark toggle button */}
