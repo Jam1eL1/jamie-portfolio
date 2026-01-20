@@ -53,29 +53,33 @@ export default function HomePage() {
         </div>
       </header>
       {/* Main Content */}
-      {/* <main className="w-full flex flex-col gap-8 md:gap-16"> */}
-      <main className="w-full flex-1 flex flex-col gap-8 md:gap-16">
+      <main className="w-full flex-1 flex flex-col gap-6 md:gap-10">
         {/* About */}
-        <section className="flex flex-col gap-4 md:gap-5 w-full">
-          <p className="text-base/[26px] font-normal text-muted-foreground">
-            I'm a recent web development bootcamp graduate specializing in full-stack development with Next.js and
-            Express.
-          </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
-            Before transitioning into tech, I worked as an associate on a wealth management team at RBC Dominion
-            Securities. My experience in banking strengthened my attention to detail and analytical mindset — qualities
-            I now bring to writing clean, efficient code.
-          </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
-            Curiosity about technology and a love for problem-solving inspired me to pursue a career where I can keep
-            learning, building, and growing.
-          </p>
-          <p className="text-base/[26px] font-normal text-muted-foreground">
-            When I'm not coding, you'll often find me swimming at the Y or running along the beaches of Kitsilano.
-          </p>
+        <section className="flex flex-col w-full gap-3 md:gap-5">
+          <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
+            <h2 className="text-[18px]/[26px] font-semibold uppercase">About</h2>
+          </div>
+          <div className="flex flex-col gap-4 md:gap-5 w-full">
+            <p className="text-base/[26px] font-normal text-muted-foreground">
+              I'm a recent web development bootcamp graduate specializing in full-stack development with Next.js and
+              Express.
+            </p>
+            <p className="text-base/[26px] font-normal text-muted-foreground">
+              Before transitioning into tech, I worked as an associate on a wealth management team at RBC Dominion
+              Securities. My experience in banking strengthened my attention to detail and analytical mindset —
+              qualities I now bring to writing clean, efficient code.
+            </p>
+            <p className="text-base/[26px] font-normal text-muted-foreground">
+              Curiosity about technology and a love for problem-solving inspired me to pursue a career where I can keep
+              learning, building, and growing.
+            </p>
+            <p className="text-base/[26px] font-normal text-muted-foreground">
+              When I'm not coding, you'll often find me swimming at the Y or running along the beaches of Kitsilano.
+            </p>
+          </div>
         </section>
         {/* Skills */}
-        <section className="flex flex-col w-full gap-6 md:gap-8">
+        <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">My Toolset</h2>
           </div>
@@ -83,7 +87,7 @@ export default function HomePage() {
         </section>
 
         {/* Projects */}
-        <section className="flex flex-col justify-center items-start w-full gap-6 md:gap-8">
+        <section className="flex flex-col justify-center items-start w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full  backdrop-blur bg-background/65 py-2 ">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">Projects</h2>
           </div>
@@ -105,7 +109,7 @@ export default function HomePage() {
         </section>
 
         {/* Journals */}
-        <section className="flex flex-col w-full gap-6 md:gap-8">
+        <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">Journals</h2>
           </div>
