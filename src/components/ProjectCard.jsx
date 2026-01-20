@@ -30,14 +30,13 @@ export function ProjectCard({ title, description, previewSrc, technologies }) {
       </div>
       {/* Project Content */}
       <div className="w-full flex flex-col justify-center items-start gap-3 px-3 py-3 md:gap-4 md:px-6 md:py-6">
-        <h3 className="text-foreground text-xl/7 font-semibold md:text-2xl/8  xl:text-[32px]/10">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
+        <h3 className="text-foreground text-base/[26px] font-normal">{title}</h3>
+        <p className="text-muted-foreground text-sm font-normal">{description}</p>
         <div className="flex flex-wrap gap-4">
           {technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}
         </div>
-        {/* <button className="btn btn-brand">View Project</button> */}
       </div>
     </article>
   );
