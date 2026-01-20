@@ -4,15 +4,15 @@ import { Badge } from "./Badge";
 export function ProjectCard({ title, description, previewSrc, technologies }) {
   return (
     <article
-      className="w-full flex flex-col
+      className="
+    w-full flex flex-col
     group
     rounded-xl
-    border-2 border-brand/20
     bg-surface
     overflow-hidden
     transition-all duration-300 ease-out
     hover:-translate-y-1
-    hover:shadow-sm hover:bg-surface-hover
+    hover:shadow-md
   "
     >
       {/* Preview Image */}
