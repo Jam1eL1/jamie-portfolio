@@ -15,7 +15,7 @@ export default function HomePage() {
       technologies: ["react", "typescript", "node.js", "tailwind"],
     },
     {
-      title: "Snack",
+      title: "Snack_2",
       description: "An all-in-one office procurement service",
       previewSrc: projectSnackPreview,
       technologies: ["react", "typescript", "node.js", "tailwind"],
@@ -23,13 +23,14 @@ export default function HomePage() {
   ];
   return (
     //  Content Container
-    <div className="w-full flex flex-col gap-6 px-3 py-12 md:px-0 md:flex-row md:gap-4">
+    <div className="w-full flex flex-col gap-6 md:flex-row md:gap-4">
       {/* Left Profile Rail */}
       <header
         className="
     w-full flex flex-col gap-3 justify-start items-start
-    md:w-[260px] md:shrink-0
-    md:sticky md:top-0 md:self-start
+    md:w-[260px] 
+    md:sticky md:top-0 
+    md:self-start md:shrink-0
   "
       >
         <h1 className="text-foreground text-2xl/8 font-semibold tracking-[-0.01em] md:text-[36px]/[44px] md:font-bold md:tracking-[-0.02em]">
@@ -75,7 +76,7 @@ export default function HomePage() {
         </section>
         {/* Skills */}
         <section className="flex flex-col w-full gap-6 md:gap-8">
-          <div className="sticky top-0 z-20 w-screen backdrop-blur bg-background/65 py-2">
+          <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">My Toolset</h2>
           </div>
           <ToolsGrid />
@@ -83,7 +84,7 @@ export default function HomePage() {
 
         {/* Projects */}
         <section className="flex flex-col justify-center items-start w-full gap-6 md:gap-8">
-          <div className="sticky top-0 z-20 w-screen  backdrop-blur bg-background/65 py-2 ">
+          <div className="sticky top-0 z-20 w-full  backdrop-blur bg-background/65 py-2 ">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">Projects</h2>
           </div>
           <p className="text-base/[26px] font-normal text-muted-foreground">
@@ -105,7 +106,7 @@ export default function HomePage() {
 
         {/* Journals */}
         <section className="flex flex-col w-full gap-6 md:gap-8">
-          <div className="sticky top-0 z-20 w-screen  backdrop-blur bg-background/65 py-2 ">
+          <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
             <h2 className="text-[18px]/[26px] font-semibold uppercase">Journals</h2>
           </div>
           <div className="flex flex-col gap-3">

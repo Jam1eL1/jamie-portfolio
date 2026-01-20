@@ -18,7 +18,6 @@ function RootLayout({ children }) {
       <body className="bg-background text-foreground font-inter">
         <Providers>
           <div className="min-h-screen flex flex-col">
-            <div className="flex-1">
               <div
                 className="
             mx-auto 
@@ -29,7 +28,6 @@ function RootLayout({ children }) {
               >
                 {children}
               </div>
-            </div>
             <footer></footer>
           </div>
         </Providers>
