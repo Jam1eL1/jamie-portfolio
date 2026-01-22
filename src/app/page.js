@@ -1,4 +1,3 @@
-import { Section } from "@/components/Section";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import GithubIcon from "@/assets/icons/github.svg";
 import GmailIcon from "@/assets/icons/gmail.svg";
@@ -29,7 +28,7 @@ export default function HomePage() {
         className="
     w-full flex flex-col gap-3 justify-start items-start
     md:w-[260px] 
-    md:sticky md:top-0 
+    md:sticky md:top-[50vh] md:-translate-y-1/2
     md:self-start md:shrink-0
   "
       >
