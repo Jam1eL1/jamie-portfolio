@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Badge } from "./Badge";
 
-export function ProjectCard({ title, description, previewSrc, technologies }) {
+export function ProjectCard({ title, description, previewSrc, technologies, status }) {
   return (
     <article
       className="
-    w-full flex flex-col
+    w-full h-full md:min-h-[460px] flex flex-col
     group
     rounded-xl
     bg-surface
@@ -27,12 +27,25 @@ export function ProjectCard({ title, description, previewSrc, technologies }) {
             sizes="(max-width: 768px) 100vw, 450px"
           />
         ) : null}
+        {status && (
+          <div className="absolute top-2 right-2">
+            <span
+              className={`text-xs font-medium px-2 py-1 rounded-full backdrop-blur-sm
+        ${status === "completed" ? "bg-success text-white" : ""}
+        ${status === "in-progress" ? "bg-accent text-white" : ""}
+        ${status === "planned" ? "bg-blue-500/80 text-white" : ""}
+      `}
+            >
+              {status === "in-progress" ? "In Progress" : status.charAt(0).toUpperCase() + status.slice(1)}
+            </span>
+          </div>
+        )}
       </div>
       {/* Project Content */}
-      <div className="w-full flex flex-col justify-center items-start gap-3 px-3 py-3 md:gap-4 md:px-6 md:py-6">
+      <div className="w-full flex flex-col flex-1 justify-center items-start gap-3 px-3 py-3 md:gap-4 md:px-6 md:py-6 ">
         <h3 className="text-foreground text-base/[26px] font-normal">{title}</h3>
         <p className="text-muted-foreground text-sm font-normal">{description}</p>
-        <div className="flex flex-wrap gap-4">
+        <div className="mt-auto flex flex-wrap gap-4">
           {technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}

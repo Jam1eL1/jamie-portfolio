@@ -9,16 +9,18 @@ export default function HomePage() {
   const displayName = "JAMIE LEE";
   const projects = [
     {
+      title: "Buddiz",
+      description: "A space for developers",
+      previewSrc: projectSnackPreview,
+      technologies: ["next.js", "react", "typescript", "node.js", "tailwind"],
+      status: "in-progress",
+    },
+    {
       title: "Snack",
       description: "An all-in-one office procurement service",
       previewSrc: projectSnackPreview,
-      technologies: ["react", "typescript", "node.js", "tailwind"],
-    },
-    {
-      title: "Snack_2",
-      description: "An all-in-one office procurement service",
-      previewSrc: projectSnackPreview,
-      technologies: ["react", "typescript", "node.js", "tailwind"],
+      technologies: ["next.js", "react", "typescript", "node.js", "tailwind", "aws"],
+      status: "completed",
     },
   ];
   return (
@@ -102,7 +104,7 @@ export default function HomePage() {
             Take a look at what I built during my web development bootcamp and my current solo work, featuring React,
             Next.js, Express, and AWS.
           </p>
-          <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 xl:gap-16">
+          <div className="flex flex-col items-stretch justify-center gap-8 md:flex-row md:gap-12 xl:gap-16">
             {projects.map((p) => (
               <ProjectCard
                 key={p.title}
@@ -110,6 +112,7 @@ export default function HomePage() {
                 description={p.description}
                 previewSrc={p.previewSrc}
                 technologies={p.technologies}
+                status={p.status}
               />
             ))}
           </div>
