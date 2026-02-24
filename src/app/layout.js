@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import { Providers } from "./providers";
 import { Inter } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ function RootLayout({ children }) {
               <SiteHeader />
               {children}
             </div>
-            <footer></footer>
+            <SiteFooter />
           </div>
         </Providers>
       </body>
