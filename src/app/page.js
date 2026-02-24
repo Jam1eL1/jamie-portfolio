@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { ProjectCard } from "@/components/ProjectCard";
 import projectSnackPreview from "@/assets/images/project_snack_preview.webp";
 export default function HomePage() {
+  const displayName = "JAMIE LEE";
   const projects = [
     {
       title: "Snack",
@@ -32,8 +33,15 @@ export default function HomePage() {
     md:self-start md:shrink-0
   "
       >
-        <h1 className="text-foreground text-2xl/8 font-semibold tracking-[-0.01em] md:text-[36px]/[44px] md:font-bold md:tracking-[-0.02em]">
-          JAMIE LEE
+        <h1
+          className="text-rise-stagger text-foreground text-2xl/8 font-semibold tracking-[-0.01em] md:text-[36px]/[44px] md:font-bold md:tracking-[-0.02em]"
+          aria-label={displayName}
+        >
+          {[...displayName].map((char, index) => (
+            <span key={`${char}-${index}`} style={{ "--i": index }}>
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
         </h1>
         <p className="text-muted-foreground text-base/[26px] font-normal">Junior Full Stack Developer</p>
         <div className="flex w-full justify-start items-center gap-3">
@@ -47,7 +55,7 @@ export default function HomePage() {
           {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
           <GmailIcon className="h-[18px] w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
           <a href="">
-            <p className="text-base/[26px] font-normal text-brand">View Résumé</p>
+            <p className="text-base/[26px] font-normal">View Résumé</p>
           </a>
         </div>
       </header>

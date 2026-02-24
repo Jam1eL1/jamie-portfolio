@@ -10,7 +10,9 @@
   --color-foreground: #0a0e1a;
   --color-muted-foreground: #334155;
 
-  --color-brand: #06b6d4;
+  /* --color-brand: #06b6d4; */
+  /* --color-brand: #a78bfa; */
+  --color-brand: #8b5cf6;
   --color-accent: #5e00ff;
   --color-success: #22c55e;
 
@@ -29,10 +31,10 @@
 
 html.dark {
   --color-background: #0a0e1a;
-  --color-surface: #1e293b;
 
-  --color-surface-hover: #2a3441;
-  --color-surface-active: #334155;
+  --color-surface: #131929;
+  --color-surface-hover: #1a2235;
+  --color-surface-active: #212d42;
 
   --color-foreground: #f1f5f9;
   --color-muted-foreground: #94a3b8;
@@ -100,6 +102,34 @@ html.dark {
 }
 
 @layer utilities {
+  .text-rise-stagger {
+    --speed: 0.4s;
+    --stagger: 0.05s;
+    --ghost-offset: 1.08em;
+    --move-up: calc(-1 * var(--ghost-offset));
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    line-height: 1.12;
+    padding-block: 0.08em;
+    text-shadow: 0 var(--ghost-offset) 0 var(--color-brand);
+    transition: background-image 0.3s ease;
+  }
+
+  .text-rise-stagger span {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform var(--speed) cubic-bezier(0.76, 0, 0.24, 1);
+    transition-delay: calc(var(--i, 0) * var(--stagger));
+  }
+
+  .text-rise-stagger:hover span,
+  .text-rise-stagger:focus-visible span {
+    transform: translateY(var(--move-up));
+  }
+
   .min-w-mobile {
     min-width: var(--width-mobile);
   }
@@ -111,4 +141,3 @@ html.dark {
     max-width: var(--width-desktop);
   }
 }
-
