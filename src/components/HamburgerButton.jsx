@@ -23,17 +23,20 @@ export function HamburgerButton({ isOpen, onClick }) {
       )}
     >
       <span className="absolute inset-0 flex items-center justify-center">
-        {isOpen ? (
-          <CloseIcon
-            className="block h-5 w-5 origin-center transition-transform duration-300 rotate-90"
-            aria-hidden="true"
-          />
-        ) : (
-          <HamburgerMenuIcon
-            className="block h-5 w-5 origin-center transition-transform duration-300"
-            aria-hidden="true"
-          />
-        )}
+        <HamburgerMenuIcon
+          className={clsx(
+            "absolute block h-5 w-5 origin-center transition-all duration-300 ease-out",
+            isOpen ? "rotate-90 scale-75 opacity-0" : "rotate-0 scale-100 opacity-100",
+          )}
+          aria-hidden="true"
+        />
+        <CloseIcon
+          className={clsx(
+            "absolute block h-5 w-5 origin-center transition-all duration-300 ease-out",
+            isOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-75 opacity-0",
+          )}
+          aria-hidden="true"
+        />
       </span>
     </button>
   );
