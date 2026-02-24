@@ -47,7 +47,7 @@ export default function HomePage() {
         <div className="flex w-full justify-start items-center gap-3">
           {/* TODO: Update linkedin address */}
           <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon className="h-6 w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
+            <LinkedInIcon className="h-6 w-6 text-accent hover:opacity-70 transition-opacity" />
           </a>
           <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
             <GithubIcon className="h-6 w-6 align-middle text-muted-foreground hover:opacity-70 transition-opacity" />
@@ -55,7 +55,7 @@ export default function HomePage() {
           {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
           <GmailIcon className="h-[18px] w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
           <a href="">
-            <p className="text-base/[26px] font-normal">View Résumé</p>
+            <p className="text-base/[26px] font-normal text-brand hover:opacity-80 transition-opacity">View Résumé</p>
           </a>
         </div>
       </header>
@@ -64,7 +64,9 @@ export default function HomePage() {
         {/* About */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase">About</h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
+              About
+            </h2>
           </div>
           <div className="flex flex-col gap-4 md:gap-5 w-full">
             <p className="text-base/[26px] font-normal text-muted-foreground">
@@ -88,7 +90,9 @@ export default function HomePage() {
         {/* Skills */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase">My Toolset</h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
+              My Toolset
+            </h2>
           </div>
           <ToolsGrid />
         </section>
@@ -96,7 +100,9 @@ export default function HomePage() {
         {/* Projects */}
         <section className="flex flex-col justify-center items-start w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full  backdrop-blur bg-background/65 py-2 ">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase">Projects</h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
+              Projects
+            </h2>
           </div>
           <p className="text-base/[26px] font-normal text-muted-foreground">
             Take a look at what I built during my web development bootcamp and my current solo work, featuring React,
@@ -118,7 +124,10 @@ export default function HomePage() {
         {/* Journals */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
-            <h2 id="journals-heading" className="text-[18px]/[26px] font-semibold uppercase">
+            <h2
+              id="journals-heading"
+              className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand"
+            >
               Journals
             </h2>
           </div>
@@ -128,7 +137,10 @@ export default function HomePage() {
               Lesson from Building My First Full-Stack App
             </h3>
 
-            <time dateTime="2025-10" className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">
+            <time
+              dateTime="2025-10"
+              className="inline-flex w-fit rounded-full bg-accent/15 px-2 py-1 text-xs/4 font-semibold tracking-[0.05em] uppercase text-accent"
+            >
               Oct 2025
             </time>
 
@@ -142,7 +154,10 @@ export default function HomePage() {
               Lesson from Building My First Full-Stack App
             </h3>
 
-            <time dateTime="2025-10" className="text-xs/4 font-semibold tracking-[0.05em] uppercase text-brand">
+            <time
+              dateTime="2025-10"
+              className="inline-flex w-fit rounded-full bg-accent/15 px-2 py-1 text-xs/4 font-semibold tracking-[0.05em] uppercase text-accent"
+            >
               Oct 2025
             </time>
 
