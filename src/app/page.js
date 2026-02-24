@@ -1,10 +1,8 @@
 import { ToolsGrid } from "@/components/ToolsGrid";
-import GithubIcon from "@/assets/icons/github.svg";
-import GmailIcon from "@/assets/icons/gmail.svg";
-import LinkedInIcon from "@/assets/icons/linkedin.svg";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { ProjectCard } from "@/components/ProjectCard";
 import projectSnackPreview from "@/assets/images/project_snack_preview.webp";
+import { ContactActions } from "@/components/ContactActions";
+
 export default function HomePage() {
   const displayName = "JAMIE LEE";
   const projects = [
@@ -46,20 +44,7 @@ export default function HomePage() {
           ))}
         </h1>
         <p className="text-muted-foreground text-base/[26px] font-normal">Junior Full Stack Developer</p>
-        <div className="flex w-full justify-start items-center gap-3">
-          {/* TODO: Update linkedin address */}
-          <a href="https://linkedin.com/in/23jisu@gmail.com" target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon className="h-6 w-6 text-accent hover:opacity-70 transition-opacity" />
-          </a>
-          <a href="https://github.com/Jam1eL1" target="_blank" rel="noopener noreferrer">
-            <GithubIcon className="h-6 w-6 align-middle text-muted-foreground hover:opacity-70 transition-opacity" />
-          </a>
-          {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
-          <GmailIcon className="h-4.5 w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
-          <a href="">
-            <p className="text-base/[26px] font-normal text-brand hover:opacity-80 transition-opacity">View Résumé</p>
-          </a>
-        </div>
+        <ContactActions />
       </header>
       {/* Main Content */}
       <main className="w-full flex-1 flex flex-col gap-6 md:gap-10">
