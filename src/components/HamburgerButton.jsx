@@ -13,7 +13,7 @@ export function HamburgerButton({ isOpen, onClick }) {
       aria-expanded={isOpen}
       className={clsx(
         "relative inline-flex h-12 w-12 items-center justify-center",
-        "rounded-xl",
+        "rounded-xl cursor-pointer",
         "transition-all duration-300 ease-out",
         "active:scale-95",
 

@@ -58,7 +58,7 @@ export function NavMenuRadial() {
                 type="button"
                 onClick={handleThemeToggle}
                 className={clsx(
-                  "flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5",
+                  "flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5 cursor-pointer",
                   "text-xs font-semibold text-white bg-accent",
                   "shadow-[0_4px_16px_rgba(0,0,0,0.25)] transition-all duration-150",
                   "hover:brightness-110 active:scale-95",
