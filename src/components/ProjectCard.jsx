@@ -16,7 +16,7 @@ export function ProjectCard({ title, description, previewSrc, technologies }) {
   "
     >
       {/* Preview Image */}
-      <div className="relative w-full h-[160px] md:h-[200px] bg-gradient-preview">
+      <div className="relative w-full h-40 md:h-50 bg-gradient-preview">
         {" "}
         {previewSrc ? (
           <Image

@@ -43,3 +43,6 @@ next-env.d.ts
 # codex and cursor rules
 .codexrules
 .cursorrules
+
+# notion checklist
+CHECKLIST_NOTION.md

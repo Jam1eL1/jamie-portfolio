@@ -138,4 +138,5 @@ html.dark {
   .max-w-desktop {
     max-width: var(--width-desktop);
   }
+
 }

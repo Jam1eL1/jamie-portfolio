@@ -53,7 +53,7 @@ export default function HomePage() {
             <GithubIcon className="h-6 w-6 align-middle text-muted-foreground hover:opacity-70 transition-opacity" />
           </a>
           {/* TODO: Use Button wrapper -> Gmail link should be copied to user's clipboard */}
-          <GmailIcon className="h-[18px] w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
+          <GmailIcon className="h-4.5 w-6 text-muted-foreground hover:opacity-70 transition-opacity" />
           <a href="">
             <p className="text-base/[26px] font-normal text-brand hover:opacity-80 transition-opacity">View Résumé</p>
           </a>
@@ -64,9 +64,7 @@ export default function HomePage() {
         {/* About */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 full  backdrop-blur bg-background/65 py-2 ">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
-              About
-            </h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">About</h2>
           </div>
           <div className="flex flex-col gap-4 md:gap-5 w-full">
             <p className="text-base/[26px] font-normal text-muted-foreground">
@@ -90,9 +88,7 @@ export default function HomePage() {
         {/* Skills */}
         <section className="flex flex-col w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full backdrop-blur bg-background/65 py-2">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
-              My Toolset
-            </h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">My Toolset</h2>
           </div>
           <ToolsGrid />
         </section>
@@ -100,9 +96,7 @@ export default function HomePage() {
         {/* Projects */}
         <section className="flex flex-col justify-center items-start w-full gap-3 md:gap-5">
           <div className="sticky top-0 z-20 w-full  backdrop-blur bg-background/65 py-2 ">
-            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">
-              Projects
-            </h2>
+            <h2 className="text-[18px]/[26px] font-semibold uppercase pl-3 border-l-2 border-brand">Projects</h2>
           </div>
           <p className="text-base/[26px] font-normal text-muted-foreground">
             Take a look at what I built during my web development bootcamp and my current solo work, featuring React,
