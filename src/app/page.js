@@ -160,9 +160,6 @@ export default function HomePage() {
             </p>
           </article>
         </section>
-
-        {/* Temporary light/dark toggle button */}
-        <ThemeToggle />
       </main>
     </div>
   );
