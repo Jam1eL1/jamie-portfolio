@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
 import { HamburgerButton } from "./HamburgerButton";
@@ -19,11 +19,14 @@ const RADIUS = 110;
 export function NavMenuRadial() {
   const [open, setOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
-  const isDark = resolvedTheme === "dark";
+  const isDark = mounted ? resolvedTheme === "dark" : false;
+  const themeAria = "Toggle theme";
   const allItems = [
     ...NAV_ITEMS.map((item) => ({ ...item, isTheme: false })),
-    { label: isDark ? "Light mode" : "Dark mode", isTheme: true },
+    { label: "theme-toggle", isTheme: true },
   ];
 
   const closeMenu = () => setOpen(false);
@@ -63,13 +66,15 @@ export function NavMenuRadial() {
                   "shadow-[0_4px_16px_rgba(0,0,0,0.25)] transition-all duration-150",
                   "hover:brightness-110 active:scale-95",
                 )}
+                aria-label={themeAria}
+                title={themeAria}
               >
                 {isDark ? (
                   <SunIcon className="h-4 w-4" aria-hidden="true" />
                 ) : (
                   <MoonIcon className="h-4 w-4" aria-hidden="true" />
                 )}
-                {item.label}
+                <span>{isDark ? "Light mode" : "Dark mode"}</span>
               </button>
             ) : (
               <Link
