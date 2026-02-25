@@ -10,8 +10,8 @@ export function Toast({ message, type = "success", className = "" }) {
       role="status"
       aria-live="polite"
       className={clsx(
-        "min-w-[260px] rounded-lg border px-4 py-3 text-sm font-semibold shadow-md backdrop-blur",
-        type === "error" ? "border-danger/40 bg-surface text-danger" : "border-brand/40 bg-surface text-foreground",
+        "toast-enter min-w-65 rounded-lg px-4 py-3 text-sm font-semibold shadow-md backdrop-blur fixed bottom-4 md:bottom-6 left-1/2 z-100 motion-reduce:animate-none",
+        type === "error" ? "bg-danger text-white" : "bg-brand text-white",
         className,
       )}
     >
