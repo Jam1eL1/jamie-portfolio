@@ -18,8 +18,8 @@ export function HamburgerButton({ isOpen, onClick }) {
         "active:scale-95",
 
         isOpen
-          ? "bg-accent text-white shadow-[0_10px_30px_rgba(245,158,11,0.35)]"
-          : "bg-surface text-foreground hover:bg-accent hover:text-white hover:shadow-[0_6px_20px_rgba(245,158,11,0.25)]",
+          ? "bg-accent text-white shadow-[0_8px_24px_rgba(0,0,0,0.28)]"
+          : "bg-surface text-foreground hover:bg-accent hover:text-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.25)]",
       )}
     >
       <span className="absolute inset-0 flex items-center justify-center">
