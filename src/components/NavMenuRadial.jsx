@@ -48,12 +48,12 @@ export function NavMenuRadial() {
         return (
           <div
             key={item.label}
-            className="absolute left-1/2 top-1/2 z-20"
+            data-open={open}
+            className="radial-item absolute left-1/2 top-1/2 z-20"
             style={{
-              transform: `translate(calc(-50% + ${-x}px), calc(-50% + ${-y}px))`,
-              opacity: open ? 1 : 0,
-              pointerEvents: open ? "auto" : "none",
-              transition: `transform 0.38s cubic-bezier(0.34,1.56,0.64,1) ${i * 0.05}s, opacity 0.2s ease ${i * 0.05}s`,
+              "--radial-x": `${-x}px`,
+              "--radial-y": `${-y}px`,
+              "--radial-delay": `${i * 0.05}s`,
             }}
           >
             {item.isTheme ? (

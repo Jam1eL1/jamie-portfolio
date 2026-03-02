@@ -27,7 +27,7 @@ export function ContactActions() {
   }
 
   return (
-    <div className="relative">
+    <>
       <div className="flex w-full justify-start items-center gap-3">
         <a href="https://linkedin.com/in/jisu-lee-b08573394" target="_blank" rel="noopener noreferrer">
           <LinkedInIcon className="h-6 w-6 text-accent hover:opacity-70 transition-opacity" />
@@ -46,6 +46,6 @@ export function ContactActions() {
       {toast ? (
         <Toast message={toast.message} type={toast.type} className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[100]" />
       ) : null}
-    </div>
+    </>
   );
 }

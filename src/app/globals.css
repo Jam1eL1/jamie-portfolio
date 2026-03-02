@@ -153,4 +153,18 @@ html.dark {
   .toast-enter {
     animation: toast-fade-in 240ms ease-out;
   }
+
+  .radial-item {
+    transform: translate(calc(-50% + var(--radial-x, 0px)), calc(-50% + var(--radial-y, 0px)));
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) var(--radial-delay, 0s),
+      opacity 0.2s ease var(--radial-delay, 0s);
+  }
+
+  .radial-item[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
