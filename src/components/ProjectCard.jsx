@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "./Badge";
 
-export function ProjectCard({ title, description, previewSrc, technologies, status }) {
+export function ProjectCard({ title, description, previewSrc, technologies, status, url }) {
   return (
     <article
       className="
@@ -45,6 +45,16 @@ export function ProjectCard({ title, description, previewSrc, technologies, stat
       <div className="w-full flex flex-col flex-1 justify-center items-start gap-3 px-3 py-3 md:gap-4 md:px-6 md:py-6 ">
         <h3 className="text-foreground text-base/[26px] font-normal">{title}</h3>
         <p className="text-muted-foreground text-sm font-normal">{description}</p>
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-foreground/90 underline-offset-4 transition hover:text-foreground hover:underline"
+          >
+            View live site ↗
+          </a>
+        )}
         <div className="mt-auto flex flex-wrap gap-4">
           {technologies.map((tech) => (
             <Badge key={tech}>{tech}</Badge>

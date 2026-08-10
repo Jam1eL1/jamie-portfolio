@@ -12,6 +12,7 @@ export default function HomePage() {
       previewSrc: projectSnackPreview,
       technologies: ["next.js", "react", "typescript", "node.js", "tailwind"],
       status: "in-progress",
+      url: "",
     },
     {
       title: "Snack",
@@ -19,6 +20,7 @@ export default function HomePage() {
       previewSrc: projectSnackPreview,
       technologies: ["next.js", "react", "typescript", "node.js", "tailwind", "aws"],
       status: "completed",
+      url: "https://sn8ck.com",
     },
   ];
   return (
@@ -98,6 +100,7 @@ export default function HomePage() {
                 previewSrc={p.previewSrc}
                 technologies={p.technologies}
                 status={p.status}
+                url={p.url}
               />
             ))}
           </div>
