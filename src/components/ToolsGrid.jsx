@@ -41,18 +41,20 @@ export function ToolsGrid() {
       className="
         w-full
         grid
-        grid-cols-3 gap-4
+        grid-cols-3 gap-3
+        md:gap-4
         md:grid-cols-4
         xl:grid-cols-6
       "
     >
       {skills.map(({ name, Icon }) => (
-        <div key={name} className="flex items-center justify-center">
+        <div key={name} className="flex items-center justify-center md:justify-start">
           <div
             className="
               relative
               rounded-lg
-              p-4
+              p-3
+              md:p-4
               bg-surface
               transition-all duration-300
               hover:scale-102
@@ -62,18 +64,21 @@ export function ToolsGrid() {
               group
             "
           >
-            <Icon
-              aria-label={name}
-              className="h-[56px] w-[57px]
-                text-muted-foreground
-                transition-transform duration-300
-                group-hover:-translate-y-2
-                group-hover:text-foreground"
-            />
+            <div className="flex items-center justify-center h-14 w-14.25">
+              <Icon
+                aria-label={name}
+                className="h-full w-full
+                  text-muted-foreground
+                  transition-transform duration-300
+                  group-hover:-translate-y-2
+                  group-hover:text-foreground"
+              />
+            </div>
 
             <span
               className="
-                absolute bottom-4 left-1/2 -translate-x-1/2
+                absolute bottom-3 left-1/2 -translate-x-1/2
+                md:bottom-4
                 text-xs font-normal
                 text-muted-foreground
                 opacity-0

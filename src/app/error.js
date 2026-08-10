@@ -1,10 +1,7 @@
 "use client";
-
-import { Section } from "@/components/Section";
-
 export default function ErrorPage({ error, reset }) {
   return (
-    <Section className="items-center justify-center min-h-[60vh]">
+    <section className="flex flex-col items-center justify-center min-h-[60vh]">
       <div className="flex flex-col items-center gap-6 md:gap-8 text-center">
         <h1 className="text-primary font-semibold text-[32px]/10 md:text-5xl/[56px] md:tracking-[-0.01em] xl:text-[64px]/[72px] xl:tracking-[-0.02em]">
           Something went wrong
@@ -21,6 +18,6 @@ export default function ErrorPage({ error, reset }) {
           </a>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

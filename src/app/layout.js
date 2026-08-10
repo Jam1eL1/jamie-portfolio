@@ -1,6 +1,8 @@
 import "@/app/globals.css";
 import { Providers } from "./providers";
 import { Inter } from "next/font/google";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,19 +20,18 @@ function RootLayout({ children }) {
       <body className="bg-background text-foreground font-inter">
         <Providers>
           <div className="min-h-screen flex flex-col">
-            <main className="flex-1">
-              <div
-                className="
+            <div
+              className="
             mx-auto 
             max-w-desktop
-            py-16 md:py-20 xl:py-30
-            flex flex-col
+            py-16 md:py-20 xl:py-30 px-6 md:px-12
+            flex flex-col relative
           "
-              >
-                {children}
-              </div>
-            </main>
-            <footer></footer>
+            >
+              <SiteHeader />
+              {children}
+            </div>
+            <SiteFooter />
           </div>
         </Providers>
       </body>
