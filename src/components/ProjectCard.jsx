@@ -17,7 +17,6 @@ export function ProjectCard({ title, description, previewSrc, technologies, stat
     >
       {/* Preview Image */}
       <div className="relative w-full h-40 md:h-50 bg-gradient-preview">
-        {" "}
         {previewSrc ? (
           <Image
             src={previewSrc}
@@ -26,7 +25,14 @@ export function ProjectCard({ title, description, previewSrc, technologies, stat
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 450px"
           />
-        ) : null}
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+            <span className="mb-2 text-[10px] uppercase tracking-[0.4em] text-muted-foreground/70">
+              Work in progress
+            </span>
+            <p className="text-sm font-semibold text-white">Preview coming soon</p>
+          </div>
+        )}
         {status && (
           <div className="absolute top-2 right-2">
             <span

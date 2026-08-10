@@ -9,7 +9,7 @@ export default function HomePage() {
     {
       title: "Buddiz",
       description: "A space for developers",
-      previewSrc: projectSnackPreview,
+      previewSrc: null,
       technologies: ["next.js", "react", "typescript", "node.js", "tailwind"],
       status: "in-progress",
       url: "",
