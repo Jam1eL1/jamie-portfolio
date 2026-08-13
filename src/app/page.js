@@ -2,7 +2,8 @@ import { ToolsGrid } from "@/components/ToolsGrid";
 import { ProjectCard } from "@/components/ProjectCard";
 import projectSnackPreview from "@/assets/images/project_snack_preview.webp";
 import { ContactActions } from "@/components/ContactActions";
-
+import { journals } from "@/lib/journal-data";
+import Link from "next/link";
 export default function HomePage() {
   const displayName = "JAMIE LEE";
   const projects = [
@@ -117,39 +118,28 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <article className="flex flex-col gap-3">
-            <h3 className="text-base/[26px] font-normal text-foreground">
-              Lesson from Building My First Full-Stack App
-            </h3>
+          {journals.map((journal) => (
+            <article key={journal.id} className="flex flex-col gap-3">
+              <h3 className="text-base/[26px] font-normal text-foreground">{journal.title}</h3>
+              <time
+                dateTime={journal.date}
+                className="inline-flex w-fit rounded-full bg-accent/15 px-2 py-1 text-xs/4 font-semibold tracking-[0.05em] uppercase text-accent"
+              >
+                {journal.displayDate}
+              </time>
 
-            <time
-              dateTime="2025-10"
-              className="inline-flex w-fit rounded-full bg-accent/15 px-2 py-1 text-xs/4 font-semibold tracking-[0.05em] uppercase text-accent"
-            >
-              Oct 2025
-            </time>
-
-            <p className="text-sm/[22px] font-normal text-muted-foreground">
-              A short reflection on challenges I faced connecting frontend and backend APIs using Express and Next.js…
-            </p>
-          </article>
-
-          <article className="flex flex-col gap-3">
-            <h3 className="text-base/[26px] font-normal text-foreground">
-              Lesson from Building My First Full-Stack App
-            </h3>
-
-            <time
-              dateTime="2025-10"
-              className="inline-flex w-fit rounded-full bg-accent/15 px-2 py-1 text-xs/4 font-semibold tracking-[0.05em] uppercase text-accent"
-            >
-              Oct 2025
-            </time>
-
-            <p className="text-sm/[22px] font-normal text-muted-foreground">
-              A short reflection on challenges I faced connecting frontend and backend APIs using Express and Next.js…
-            </p>
-          </article>
+              <p className="text-sm/[22px] font-normal text-muted-foreground">{journal.summary}</p>
+              <Link
+                href={`/journals/${journal.id}`}
+                className="group inline-flex w-fit items-center gap-2 text-sm/[22px] font-semibold text-brand transition-opacity hover:opacity-70"
+              >
+                Read journal
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            </article>
+          ))}
         </section>
       </main>
     </div>
